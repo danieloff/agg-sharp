@@ -31,11 +31,11 @@ using ShaderGen;
 using System.Numerics;
 using static ShaderGen.ShaderBuiltins;
 
-[assembly: ShaderSet("PositionColor", "RenderOpenGl.Shaders.PositionColor.VS", "RenderOpenGl.Shaders.PositionColor.FS")]
+[assembly: ShaderSet("PositionColorGL", "RenderOpenGl.Shaders.PositionColorGL.VS", "RenderOpenGl.Shaders.PositionColorGL.FS")]
 
 namespace RenderOpenGl.Shaders
 {
-	public class PositionColor
+	public class PositionColorGL
 	{
 		[ResourceSet(0)]
 		public Matrix4x4 Projection;
@@ -56,7 +56,7 @@ namespace RenderOpenGl.Shaders
 			output.Color = input.Color;
 
 			// this is the old behavior
-			output.SystemPosition = new Vector4(input.Position.X, input.Position.Y, 0, 1);
+			//output.SystemPosition = new Vector4(input.Position.X, input.Position.Y, 0, 1);
 
 			return output;
 		}

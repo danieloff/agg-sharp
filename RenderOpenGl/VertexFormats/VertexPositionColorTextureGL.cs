@@ -32,7 +32,7 @@ using Veldrid;
 
 namespace RenderOpenGl.VertexFormats
 {
-	public struct VertexPositionColorTexture
+	public struct VertexPositionColorTextureGL
 	{
 		public const uint SizeInBytes = 36;
 
@@ -40,7 +40,7 @@ namespace RenderOpenGl.VertexFormats
 		public RgbaFloat Color;
 		public Vector2 TextureUv;
 
-		public VertexPositionColorTexture(Vector3 pos, RgbaFloat color, Vector2 uv)
+		public VertexPositionColorTextureGL(Vector3 pos, RgbaFloat color, Vector2 uv)
 		{
 			Color = color;
 			Position = pos;

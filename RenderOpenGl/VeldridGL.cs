@@ -39,7 +39,7 @@ namespace MatterHackers.RenderOpenGl
 	{
 		public static VeldridGL Instance = new VeldridGL();
 
-		public VertexPositionColor[] quadVertices;
+		public VertexPositionColorGL[] quadVertices;
 		public GraphicsDevice graphicsDevice;
 
 		// matrix transforms
@@ -134,14 +134,14 @@ namespace MatterHackers.RenderOpenGl
 
 			quadVertices = new[]
 			{
-				new VertexPositionColor(new Vector3(-.75f, .75f, 0), RgbaFloat.Red),
-				new VertexPositionColor(new Vector3(.75f, .75f, 0), RgbaFloat.Green),
-				new VertexPositionColor(new Vector3(-.75f, -.75f, 0), RgbaFloat.Blue),
-				new VertexPositionColor(new Vector3(.75f, -.75f, 0), RgbaFloat.Yellow)
+				new VertexPositionColorGL(new Vector3(-.75f, .75f, 0), RgbaFloat.Red),
+				new VertexPositionColorGL(new Vector3(.75f, .75f, 0), RgbaFloat.Green),
+				new VertexPositionColorGL(new Vector3(-.75f, -.75f, 0), RgbaFloat.Blue),
+				new VertexPositionColorGL(new Vector3(.75f, -.75f, 0), RgbaFloat.Yellow)
 			};
 
 			BufferDescription vbDescription = new BufferDescription(
-				4 * VertexPositionColor.SizeInBytes,
+				4 * VertexPositionColorGL.SizeInBytes,
 				BufferUsage.VertexBuffer);
 			vertexBuffer = resourceFactory.CreateBuffer(vbDescription);
 			_graphicsDevice.UpdateBuffer(vertexBuffer, 0, quadVertices);
@@ -183,8 +183,8 @@ namespace MatterHackers.RenderOpenGl
 				},
 				new[]
 				{
-					LoadShader(resourceFactory, "PositionColor", ShaderStages.Vertex, "VS"),
-					LoadShader(resourceFactory, "PositionColor", ShaderStages.Fragment, "FS")
+					LoadShader(resourceFactory, "PositionColorGL", ShaderStages.Vertex, "VS"),
+					LoadShader(resourceFactory, "PositionColorGL", ShaderStages.Fragment, "FS")
 				});
 			}
 

@@ -31,11 +31,11 @@ using ShaderGen;
 using System.Numerics;
 using static ShaderGen.ShaderBuiltins;
 
-[assembly: ShaderSet("PositionColorTexture", "RenderOpenGl.Shaders.PositionColorTexture.VS", "RenderOpenGl.Shaders.PositionColorTexture.FS")]
+[assembly: ShaderSet("PositionColorTextureGL", "RenderOpenGl.Shaders.PositionColorTextureGL.VS", "RenderOpenGl.Shaders.PositionColorTextureGL.FS")]
 
 namespace RenderOpenGl.Shaders
 {
-	public class PositionColorTexture
+	public class PositionColorTextureGL
 	{
 		[ResourceSet(0)]
 		public Matrix4x4 Projection;

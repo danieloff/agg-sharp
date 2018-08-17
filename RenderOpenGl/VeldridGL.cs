@@ -167,8 +167,8 @@ namespace MatterHackers.RenderOpenGl
 					},
 					new[]
 					{
-					LoadShader(resourceFactory, "PositionTexture", ShaderStages.Vertex, "VS"),
-					LoadShader(resourceFactory, "PositionTexture", ShaderStages.Fragment, "FS")
+					LoadShader(resourceFactory, "PositionTextureGL", ShaderStages.Vertex, "VS"),
+					LoadShader(resourceFactory, "PositionTextureGL", ShaderStages.Fragment, "FS")
 					});
 			}
 

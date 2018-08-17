@@ -31,14 +31,14 @@ using System.Numerics;
 
 namespace RenderOpenGl.VertexFormats
 {
-	public struct VertexPositionTexture
+	public struct VertexPositionTextureGL
 	{
 		public const uint SizeInBytes = 20;
 
 		public Vector3 Position;
 		public Vector2 TextureUv;
 
-		public VertexPositionTexture(Vector3 pos, Vector2 uv)
+		public VertexPositionTextureGL(Vector3 pos, Vector2 uv)
 		{
 			Position = pos;
 			TextureUv = uv;

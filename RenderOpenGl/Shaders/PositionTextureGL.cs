@@ -2,11 +2,11 @@
 using System.Numerics;
 using static ShaderGen.ShaderBuiltins;
 
-[assembly: ShaderSet("PositionTexture", "RenderOpenGl.Shaders.PositionTexture.VS", "RenderOpenGl.Shaders.PositionTexture.FS")]
+[assembly: ShaderSet("PositionTextureGL", "RenderOpenGl.Shaders.PositionTextureGL.VS", "RenderOpenGl.Shaders.PositionTextureGL.FS")]
 
 namespace RenderOpenGl.Shaders
 {
-	public class PositionTexture
+	public class PositionTextureGL
 	{
 		[ResourceSet(0)]
 		public Matrix4x4 Projection;

@@ -369,7 +369,7 @@ namespace MatterHackers.Agg.Font
 						//
 						glyph = new Glyph();
 						glyph.unicode = character;
-						glyph.horiz_adv_x = _ofTypeface.GetHAdvanceWidthFromGlyphIndex(glyphIndex);
+						glyph.horiz_adv_x = _ofTypeface.GetAdvanceWidthFromGlyphIndex(glyphIndex); //TODO, check if this is the right substitution GetHAdvanceWidthFromGlyphIndex(glyphIndex);
 
 						glyphs.Add(character, glyph);
 
